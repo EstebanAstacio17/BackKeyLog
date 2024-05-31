@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenticatedUser.cs" />
     <Compile Include="Create.cs">
       <SubType>Form</SubType>
     </Compile>

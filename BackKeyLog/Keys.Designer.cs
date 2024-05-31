@@ -126,6 +126,7 @@
             this.Name = "Keys";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Keys";
+            this.Load += new System.EventHandler(this.Keys_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKeys)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
