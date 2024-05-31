@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthenticatedUser.cs" />
+    <Compile Include="Confirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirm.Designer.cs">
+      <DependentUpon>Confirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="Credentials.Designer.cs">
       <DependentUpon>Credentials.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Confirm.resx">
+      <DependentUpon>Confirm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create.resx">
       <DependentUpon>Create.cs</DependentUpon>
     </EmbeddedResource>

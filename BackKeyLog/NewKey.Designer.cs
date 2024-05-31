@@ -37,13 +37,15 @@
             this.btnGenerete = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.lbl = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 9);
+            this.label4.Location = new System.Drawing.Point(40, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 24);
             this.label4.TabIndex = 5;
@@ -97,11 +99,11 @@
             // 
             this.txtKey.BackColor = System.Drawing.Color.White;
             this.txtKey.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKey.Location = new System.Drawing.Point(12, 202);
             this.txtKey.Name = "txtKey";
             this.txtKey.ReadOnly = true;
-            this.txtKey.Size = new System.Drawing.Size(187, 26);
+            this.txtKey.Size = new System.Drawing.Size(192, 22);
             this.txtKey.TabIndex = 20;
             this.txtKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -112,34 +114,57 @@
             this.btnGenerete.ForeColor = System.Drawing.Color.White;
             this.btnGenerete.Location = new System.Drawing.Point(12, 156);
             this.btnGenerete.Name = "btnGenerete";
-            this.btnGenerete.Size = new System.Drawing.Size(187, 40);
+            this.btnGenerete.Size = new System.Drawing.Size(192, 40);
             this.btnGenerete.TabIndex = 21;
             this.btnGenerete.Text = "Generete";
             this.btnGenerete.UseVisualStyleBackColor = false;
+            this.btnGenerete.Click += new System.EventHandler(this.btnGenerete_Click);
             // 
             // btnCopy
             // 
             this.btnCopy.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCopy.ForeColor = System.Drawing.Color.White;
-            this.btnCopy.Location = new System.Drawing.Point(12, 234);
+            this.btnCopy.Location = new System.Drawing.Point(12, 281);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(187, 40);
+            this.btnCopy.Size = new System.Drawing.Size(92, 40);
             this.btnCopy.TabIndex = 22;
             this.btnCopy.Text = "Copy";
             this.btnCopy.UseVisualStyleBackColor = false;
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(12, 280);
+            this.btnSave.Location = new System.Drawing.Point(111, 281);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(187, 40);
+            this.btnSave.Size = new System.Drawing.Size(93, 40);
             this.btnSave.TabIndex = 23;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(9, 227);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(33, 16);
+            this.lbl.TabIndex = 25;
+            this.lbl.Text = "Title";
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.BackColor = System.Drawing.Color.White;
+            this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(12, 251);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(192, 22);
+            this.txtTitle.TabIndex = 26;
             // 
             // NewKey
             // 
@@ -147,6 +172,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(213, 333);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.btnGenerete);
@@ -177,6 +204,8 @@
         private System.Windows.Forms.Button btnGenerete;
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox txtTitle;
     }
 }
 
