@@ -43,9 +43,12 @@
             this.dgvKeys.AllowUserToDeleteRows = false;
             this.dgvKeys.BackgroundColor = System.Drawing.Color.White;
             this.dgvKeys.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKeys.ColumnHeadersVisible = false;
             this.dgvKeys.Location = new System.Drawing.Point(12, 49);
             this.dgvKeys.Name = "dgvKeys";
             this.dgvKeys.ReadOnly = true;
+            this.dgvKeys.RowHeadersVisible = false;
+            this.dgvKeys.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKeys.Size = new System.Drawing.Size(306, 150);
             this.dgvKeys.TabIndex = 0;
             // 
@@ -70,25 +73,27 @@
             this.btnCopy.TabIndex = 23;
             this.btnCopy.Text = "Copy";
             this.btnCopy.UseVisualStyleBackColor = false;
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.SteelBlue;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(171, 205);
+            this.btnDelete.Location = new System.Drawing.Point(12, 261);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 50);
             this.btnDelete.TabIndex = 24;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnNewKey
             // 
             this.btnNewKey.BackColor = System.Drawing.Color.SteelBlue;
             this.btnNewKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewKey.ForeColor = System.Drawing.Color.White;
-            this.btnNewKey.Location = new System.Drawing.Point(12, 261);
+            this.btnNewKey.Location = new System.Drawing.Point(171, 205);
             this.btnNewKey.Name = "btnNewKey";
             this.btnNewKey.Size = new System.Drawing.Size(150, 50);
             this.btnNewKey.TabIndex = 25;

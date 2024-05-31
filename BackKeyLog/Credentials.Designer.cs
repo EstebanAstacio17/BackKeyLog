@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnChangePassword = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNew = new System.Windows.Forms.TextBox();
+            this.txtOld = new System.Windows.Forms.TextBox();
+            this.txtNew2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,35 +57,42 @@
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(187, 40);
             this.btnChangePassword.TabIndex = 1;
-            this.btnChangePassword.Text = "Save";
+            this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
-            // textBox1
+            // txtNew
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(25, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtNew.BackColor = System.Drawing.Color.White;
+            this.txtNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNew.Location = new System.Drawing.Point(25, 135);
+            this.txtNew.Name = "txtNew";
+            this.txtNew.PasswordChar = '*';
+            this.txtNew.Size = new System.Drawing.Size(164, 26);
+            this.txtNew.TabIndex = 2;
             // 
-            // textBox2
+            // txtOld
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(25, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 26);
-            this.textBox2.TabIndex = 3;
+            this.txtOld.BackColor = System.Drawing.Color.White;
+            this.txtOld.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOld.Location = new System.Drawing.Point(25, 69);
+            this.txtOld.Name = "txtOld";
+            this.txtOld.PasswordChar = '*';
+            this.txtOld.Size = new System.Drawing.Size(164, 26);
+            this.txtOld.TabIndex = 3;
             // 
-            // textBox3
+            // txtNew2
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(25, 187);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(164, 26);
-            this.textBox3.TabIndex = 4;
+            this.txtNew2.BackColor = System.Drawing.Color.White;
+            this.txtNew2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNew2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNew2.Location = new System.Drawing.Point(25, 187);
+            this.txtNew2.Name = "txtNew2";
+            this.txtNew2.PasswordChar = '*';
+            this.txtNew2.Size = new System.Drawing.Size(164, 26);
+            this.txtNew2.TabIndex = 4;
             // 
             // label2
             // 
@@ -126,9 +133,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNew2);
+            this.Controls.Add(this.txtOld);
+            this.Controls.Add(this.txtNew);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -146,9 +153,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnChangePassword;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNew;
+        private System.Windows.Forms.TextBox txtOld;
+        private System.Windows.Forms.TextBox txtNew2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
