@@ -52,7 +52,9 @@ namespace BackKeyLog
                     AuthenticatedUser.IdKey = idKey;
                     Keys openKeys = new Keys();
                     Clean();
-                    openKeys.ShowDialog();
+                    openKeys.Show();
+                    this.Hide();
+                    openKeys.FormClosed += (s, args) => this.Close(); // Cerrar el formulario Login cuando se cierre Keys
                 }
                 else
                 {

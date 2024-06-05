@@ -26,12 +26,12 @@ namespace BackKeyLog
             ShowPasswordRecords(idKey);
 
             // Modificar el ancho de la columna "Password"
-            dgvKeys.Columns["TituloKey"].Width = 53; // Establece el ancho a 200 píxeles, ajusta según tus necesidades
-            dgvKeys.Columns["Password"].Width = 250;
+            dgvKeys.Columns["TituloKey"].Width = 253; // Establece el ancho a 200 píxeles, ajusta según tus necesidades
+            //dgvKeys.Columns["Password"].Width = 250;
             dgvKeys.Columns["Id"].Visible = false; // Ocultar la columna ID
 
         }
-
+        
         public void ShowPasswordRecords(int idKey)
         {
             try
@@ -46,7 +46,22 @@ namespace BackKeyLog
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
+
+                        // Crear una nueva columna para mostrar los asteriscos
+                        dataTable.Columns.Add("MaskedPassword", typeof(string));
+
+                        foreach (DataRow row in dataTable.Rows)
+                        {
+                            row["MaskedPassword"] = new string('*', row["Password"].ToString().Length);
+                        }
+
                         dgvKeys.DataSource = dataTable;
+
+                        // Ocultar la columna de contraseña real
+                        dgvKeys.Columns["Password"].Visible = false;
+                        // Mostrar la columna de contraseña enmascarada
+                        dgvKeys.Columns["MaskedPassword"].HeaderText = "Password";
+                        dgvKeys.Columns["MaskedPassword"].Width = 50;
                     }
                 }
             }
@@ -55,7 +70,6 @@ namespace BackKeyLog
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
         }
-
 
         private void btnNewKey_Click(object sender, EventArgs e)
         {

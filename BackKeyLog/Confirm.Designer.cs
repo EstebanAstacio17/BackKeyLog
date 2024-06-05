@@ -30,6 +30,7 @@
         {
             this.btnConfirm = new System.Windows.Forms.Button();
             this.txtConfirm = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConfirm
@@ -38,7 +39,7 @@
             this.btnConfirm.ForeColor = System.Drawing.Color.SteelBlue;
             this.btnConfirm.Location = new System.Drawing.Point(12, 48);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(187, 40);
+            this.btnConfirm.Size = new System.Drawing.Size(140, 40);
             this.btnConfirm.TabIndex = 0;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -55,12 +56,25 @@
             this.txtConfirm.Size = new System.Drawing.Size(187, 26);
             this.txtConfirm.TabIndex = 1;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Crimson;
+            this.btnCancel.Location = new System.Drawing.Point(158, 48);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(41, 40);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "X";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // Confirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(211, 100);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtConfirm);
             this.Controls.Add(this.btnConfirm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -78,5 +92,6 @@
 
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.TextBox txtConfirm;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
